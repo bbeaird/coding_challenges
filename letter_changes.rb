@@ -1,7 +1,8 @@
-def letter_changes(str)
+def LetterChanges(str)
   letters_array = ('a'..'z').to_a
   split_str = str.split('')
   new_str = ""
+
   split_str.each_with_index do |letter, i|
     if letter =~ /[a-zA-Z]/
       next_index = letters_array.index(letter.downcase) + 1
@@ -14,7 +15,14 @@ def letter_changes(str)
       new_str += letter
     end
   end
-  return new_str
+  # vowel_upcase_hash = { 'a' => 'A', 'e' => 'E', 'i' => 'I', 'o' => 'O', 'u' => 'U' }
+  new_str = new_str.split('')
+  new_str.each_with_index do |letter, i|
+    if letter =~ /[aeiou]/
+      new_str[i] = letter.upcase
+    end
+  end
+  return new_str.join('')
 end
 
-p letter_changes("Argument goes here")
+p LetterChanges("Argument goes here")
