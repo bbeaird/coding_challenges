@@ -1,4 +1,4 @@
-def SimpleSymbols(str)
+def simple_symbols(str)
   # set a previous, current, and next
   # use regex to see if current is a letter
   # if so, check that previous and next are + signs
@@ -14,5 +14,5 @@ def SimpleSymbols(str)
   return true
 end
 
-p SimpleSymbols("+d+=3=+s+")
-p SimpleSymbols("f++d+")
+p simple_symbols("+d+=3=+s+")
+p simple_symbols("f++d+")
