@@ -1,4 +1,5 @@
 def palindrome(str)
+  str.downcase!
   no_spaces_str = str.gsub(' ', '')
   i = 0
   while i <= no_spaces_str.length
@@ -9,6 +10,7 @@ def palindrome(str)
 end
 
 p palindrome("racecar")
+p palindrome("RaceCar")
 p palindrome("never odd or even")
 p palindrome("eye")
 p palindrome("eyee")

@@ -7,7 +7,10 @@ def array_addition(arr)
   (2..arr.length).each do |i|
     combinations = arr.combination(i)
     combinations.each do |comb|
-      return true if comb.inject(:+) == max
+      if comb.inject(:+) == max
+        return true
+        break
+      end
     end
   end
   return false
