@@ -3,13 +3,8 @@ def run_length(str)
   count = 0
   output = ""
 
-  str.each_char.with_index do |char, i|
-    if (i == str.length - 1) && count == 1
-      output << str[-1] + 1.to_s
-    elsif (i == str.length - 1) && count != 1
-      count += 1
-      output << (count.to_s + prev)
-    elsif prev == char
+  str.each_char do |char|
+    if prev == char
       count += 1
     else
       output << (count.to_s + prev)
@@ -17,8 +12,9 @@ def run_length(str)
     end
     prev = char
   end
-  # output << str[-1] + 1.to_s #if i == (str.length - 1) && count == 1
-  output
+  output << count.to_s + prev
 end
 
-p run_length("wwwbbbw")
+p run_length("wwwbbbw") # 3w3b1w
+p run_length("wwwbbb")
+p run_length("aabbcde")
