@@ -8,5 +8,5 @@ def count_inversions_naive(arr)
   return count
 end
 
-arr = [6,5,4,3,2,1]
+arr = [9,8,7,6,5,4,3,2,1]
 p count_inversions_naive(arr)
