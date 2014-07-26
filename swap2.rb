@@ -24,4 +24,9 @@ def swap2(str)
   modified_str
 end
 
-p swap2("2S 6 du5d4e 234eee6")
+def swap2_way_better(str)
+  str.swapcase.gsub!(/(\d)([a-zA-Z]+)(\d)/, '\3\2\1')
+end
+
+# p swap2("2S 6 du5d4e 234eee6")
+p swap2_way_better("2S 6 du5d4e 234eee6")
