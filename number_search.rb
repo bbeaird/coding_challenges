@@ -9,7 +9,8 @@ def number_search(str)
       letters_count += 1
     end
   end
-  return numbers_sum / letters_count
+  return (numbers_sum / letters_count.to_f).round
 end
 
 p number_search("H3ello9-9")
+p number_search("i love cake 9 8 7")
