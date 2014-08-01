@@ -25,12 +25,7 @@ def triple_double(num1, num2)
     prev2 = split_num2[i]
   end
 
-  if !triples.empty?
-    triples.each do |i|
-      return 1 if doubles.include?(i)
-    end
-  end
-  return 0
+  (triples & doubles).any? ? 1 : 0
 end
 
 p triple_double(465555, 5579)
