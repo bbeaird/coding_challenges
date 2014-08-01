@@ -1,3 +1,15 @@
+# Shorter, but O(n^2)
+def triple_double_naive(num1, num2)
+  num1.to_s.each_char do |x|
+    return 1 if num1.to_s.include?("#{x}#{x}#{x}") && num2.to_s.include?("#{x}#{x}")
+  end
+  return 0
+end
+
+p triple_double_naive(465555, 5579)
+p triple_double_naive(67844, 66237)
+
+# Longer, but O(n) time.
 def triple_double(num1, num2)
   triples = []
   split_num1 = num1.to_s.split('')
