@@ -26,3 +26,15 @@ p string_reduction("abcabc") # should return 2
 p string_reduction("a") # should return 1
 p string_reduction("cccc") # should return 4
 p string_reduction("abc") # should return 2
+
+
+def string_reduction_shorter(str)
+  reduced_str = str.sub(/ab|ba/, 'c').sub(/ac|ca/, 'b').sub(/bc|cb/, 'a')
+  return reduced_str.length if reduced_str.eql?(str)
+  string_reduction_shorter(reduced_str)
+end
+
+p string_reduction_shorter("abcabc")
+p string_reduction_shorter("ccccc")
+p string_reduction_shorter("a")
+p string_reduction_shorter("abc")
