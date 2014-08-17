@@ -1,6 +1,6 @@
 function checkForDoubleSpaces(string) {
   var doubleSpacesFlag = false;
-  for (i = 0; i < string.length; i++) {
+  for (var i = 0; i < string.length; i++) {
     if (string[i] === " " && string[i-1] === " ") {
       alert("You have double spaces in your string!");
       doubleSpacesFlag = true;
@@ -14,7 +14,7 @@ function checkForDoubleSpaces(string) {
 
 var checkForDoubleSpacesVar = function(string) {
   var doubleSpacesFlag = false;
-  for (i = 0; i < string.length; i++) {
+  for (var i = 0; i < string.length; i++) {
     if (string[i] === " " && string[i-1] === " ") {
       alert("You have double spaces in your string!");
       doubleSpacesFlag = true;
